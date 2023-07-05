@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head lang = "ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Coldplay</title>
+        <meta name = "Coldplay Latest Album" content = "Universe 앨범">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "stylesheet" href = "https://unpkg.com/ress/dist/ress.min.css">
+        <link href = "https://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans" rel = "stylesheet">
+        <link href = "css/album.css" rel = "stylesheet">
+        <style>
+        body{
+          text-transform: uppercase;}
+        </style>
+        <script language="JavaScript">
+          <!--
+          function na_restore_img_src(name, nsdoc)
+          {
+            var img = eval((navigator.appName.indexOf('Netscape', 0) != -1) ? nsdoc+'.'+name : 'document.all.'+name);
+            if (name == '')
+              return;
+            if (img && img.altsrc) {
+              img.src    = img.altsrc;
+              img.altsrc = null;
+            } 
+          }
+          
+          function na_preload_img()
+          { 
+            var img_list = na_preload_img.arguments;
+            if (document.preloadlist == null) 
+              document.preloadlist = new Array();
+            var top = document.preloadlist.length;
+            for (var i=0; i < img_list.length-1; i++) {
+              document.preloadlist[top+i] = new Image;
+              document.preloadlist[top+i].src = img_list[i+1];
+            } 
+          }
+          
+          function na_change_img_src(name, nsdoc, rpath, preload)
+          { 
+            var img = eval((navigator.appName.indexOf('Netscape', 0) != -1) ? nsdoc+'.'+name : 'document.all.'+name);
+            if (name == '')
+              return;
+            if (img) {
+              img.altsrc = img.src;
+              img.src    = rpath;
+            } 
+          }
+          
+          // -->
+          </script>
+    </head>
+    <body OnLoad="na_preload_img(false, 'coldplay/coldplay0_.png', 'coldplay/coldplay1_.png', 'coldplay/coldplay2_.png', 'coldplay/coldplay3_.png', 'coldplay/coldplay4_.png', 'coldplay/coldplay5_.png');">
+        <a name ="header"></a>
+        <div class="jb-box">
+          <video muted autoplay loop>
+            <source src="https://www.coldplay.com/wp/wp-content/uploads/2021/07/MOT.mp4" type="video/mp4">
+            <strong>Your browser does not support the video tag.</strong>
+          </video>
+
+          <div class="jb-text">
+            <p><font face = "Times New Roman"><strong><i>UNIVERSE</i></strong></font></p>
+          </div>
+                <p>
+          <div align = "right" class="jb-text2">
+        </div>
+    </div>
+    <div class="jb-text2">
+        <nav>
+		<table border = "0">
+			<tr>
+				<td><h1><a href ="index.html" style="color: white"><font size = "6" face = "Times New Roman"><strong><i>Coldplay</i></strong></font></a></p></a></h1></td>
+			</tr>
+		</table>
+		</nav></p>
+      </div>
+<br><br>
+
+
+
+        <div class ="wrapper grid">
+          <div class="item">
+              <img src="img/p_calypso.png">
+          </div>
+          <div class="item">
+              <img src="img/p_epiphane.png">
+          </div>
+          <div class="item">
+              <img src="img/p_floris.png">
+          </div>
+          <div class="item">
+              <img src="img/p_kubik.png">
+          </div>
+          <div class="item">
+              <img src="img/p_neonmoon.png">
+          </div>
+      </div>
+
+      <div id="top" bgcolor = "#fff">
+          <button type="button">
+              <a href="#header"><img width = "25px" src = "img/top.png"></img></a>
+          </button>
+        </div>
+        
+        
+        <footer id="footer">
+          <p><em>Copyright &copy; Sonne 2023</em></p>
+        </footer>
+
+        <script>
+        let pages = 0;//?�재 ?�덱??번호
+        let positionValue = 0;//images ?�치�?
+        const IMAGE_WIDTH = 500;//?�번 ?�동 ??IMAGE_WIDTH만큼 ?�동?�다.
+        //DOM
+        const backBtn = document.querySelector(".back")
+        const nextBtn = document.querySelector(".next")
+        const images = document.querySelector(".images")
+        
+        
+        function next() {
+          if (pages< 5) {
+            backBtn.removeAttribute('disabled')//?�로 ?�동???�이??disabled가 ?�니?�서 ?�성????��?�다.
+            positionValue -= IMAGE_WIDTH;//IMAGE_WIDTH??증감??positionValue???�?�한??
+            images.style.transform = `translateX(${positionValue}px)`;
+            //x축으�?positionValue만큼??px???�동?�다.
+            pages += 1; //?�음 ?�이지�??�동?�서 pages�?1증�? ?�킨??
+          }
+          if (pages === 5) { //
+            nextBtn.setAttribute('disabled', 'true')//마�?�??�일 ??next버튼??disabled?�다.
+          }
+        }
+        
+        function back() {
+          if (pages > 0) {
+            nextBtn.removeAttribute('disabled')
+            positionValue += IMAGE_WIDTH;
+            images.style.transform = `translateX(${positionValue}px)`;
+            pages -= 1; //?�전 ?�이지�??�동?�서 pages�?1감소 ?�킨??
+          }
+          if (pages === 0) {
+            backBtn.setAttribute('disabled', 'true')//마�?�??�일 ??back버튼??disabled?�다.
+          }
+        }
+        
+        function init() {  //초기 ?�면 ?�태
+          backBtn.setAttribute('disabled', 'true'); //?�성??disabled가 ?�다.
+          backBtn.addEventListener("click", back); //?�릭???�음?�로 ?�동?�다.
+          nextBtn.addEventListener("click", next);//?�릭???�전?�로 ?�동?�다.
+        }
+        init();
+        
+        </script>
+        <map name="ImageMap1">
+        <area shape="rect" coords="28, 9, 259, 66" href="index.html" target="_self">
+        </map>    
+        
+  </body>
+</html>
